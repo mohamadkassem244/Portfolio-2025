@@ -74,6 +74,7 @@ body {
       justify-content: center;
       height: 100%;
       aspect-ratio: 1;
+      overflow: hidden;
       background-color: transparent;
       & img {
         width: 100%;
@@ -95,7 +96,6 @@ body {
       align-items: center;
       justify-content: center;
       height: 100%;
-      gap: 1rem;
       background-color: transparent;
       & button {
         all: unset;
@@ -132,15 +132,13 @@ body {
         justify-content: center;
         height: 100%;
         aspect-ratio: 1;
+        overflow: hidden;
         cursor: pointer;
         background-color: transparent;
         & img {
           width: 50%;
           height: 50%;
           object-fit: contain;
-        }
-        &:hover {
-          background-color: transparent;
         }
       }
     }
@@ -151,8 +149,88 @@ body {
   }
 }
 
-.content{
-  display: flex;
-  flex-direction: column;
-  font-size: 7rem;
+.content {
+  & .projects {
+    display: grid;
+    @media (max-width: 480px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    @media (min-width: 481px) and (max-width: 768px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    @media (min-width: 769px) and (max-width: 992px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (min-width: 993px) and (max-width: 1200px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (min-width: 1201px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    & .item {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      & .top {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        aspect-ratio: 16/9;
+        overflow: hidden;
+        background-color: transparent;
+        & img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+      & .bottom {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        & .title{
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: start;
+          & .logo-type{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 10%;
+            aspect-ratio: 1;
+            overflow: hidden;
+            background-color: transparent;
+            & img {
+              width: 60%;
+              height: 60%;
+              object-fit: contain;
+            }
+          }
+          & .name{
+            display: flex;
+            align-items: center;
+            justify-content: start;
+          }
+        }
+        & .description{
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          -webkit-line-clamp: 4;
+        }
+        & .used{
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          width: 100%;
+          & .item{
+            width: max-content;
+          }
+        }
+      }
+    }
+  }
 }

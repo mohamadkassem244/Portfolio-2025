@@ -1,7 +1,7 @@
 $(window).scroll(function() {
     const scrollPosition = $(window).scrollTop();
     const topBarHeight = $('.top-bar').height(); 
-    if (scrollPosition > topBarHeight) {
+    if (scrollPosition > 0) {
         $('.top-bar').addClass('scrolled');
       } else {
         $('.top-bar').removeClass('scrolled');
