@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
     <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="top-bar">
@@ -12,6 +13,15 @@
         <div class="left">
             <div class="logo">
                 <img src="./assets/mk-logo.jpg" alt="MK Logo">
+            </div>
+        </div>
+
+        <div class="mid">
+            <div class="sections">
+                <button data-target="#home">Home</button>
+                <button data-target="#about">About</button>
+                <button data-target="#projects">Projects</button>
+                <button data-target="#contact">Contact</button>
             </div>
         </div>
 
@@ -27,5 +37,14 @@
         </div>
 
     </div>
+
+    <div class="content">
+        <div id="home"></div>
+        <div id="about"></div>
+        <div id="projects"></div>
+        <div id="contact"></div>
+    </div>
+    
+<script src="./script/script.js"></script>
 </body>
 </html>
