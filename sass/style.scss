@@ -150,6 +150,108 @@ body {
 }
 
 .content {
+  & .home {
+    
+  }
+  & .about {
+    display: flex;
+    flex-direction: column;
+    & .introduce{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      @media (max-width: 480px) {
+        flex-direction: column;
+      }
+      @media (min-width: 481px) and (max-width: 768px) {
+        flex-direction: column;
+      }
+      @media (min-width: 769px) and (max-width: 992px) {
+        flex-direction: row;
+      }
+      @media (min-width: 993px) and (max-width: 1200px) {
+        flex-direction: row;
+      }
+      @media (min-width: 1201px) {
+        flex-direction: row;
+      }
+      & .profile{
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+        aspect-ratio: 1;
+        overflow: hidden;
+        background-color: transparent;
+        & img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+      & .text{
+        flex: 2;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+      }
+    }
+    
+  }
+  & .services{
+    display: grid;
+    @media (max-width: 480px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (min-width: 481px) and (max-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (min-width: 769px) and (max-width: 992px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media (min-width: 993px) and (max-width: 1200px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media (min-width: 1201px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    & .item {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      & .top {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        aspect-ratio: 1;
+        overflow: hidden;
+        background-color: transparent;
+        & img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+      & .bottom {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        & .name{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        & .description{
+          display: flex;
+          align-items: center;
+          justify-content: start;
+        }
+      }
+    }
+  }
   & .projects {
     display: grid;
     @media (max-width: 480px) {
