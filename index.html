@@ -1,91 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
     <title>Document</title>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-</head>
-<body>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
     <div class="top-bar">
-
-        <div class="left">
-            <div class="logo">
-                <img src="./assets/mk-logo.jpg" alt="MK Logo">
-            </div>
+      <div class="left">
+        <div class="logo">
+          <img src="./assets/mk-logo.jpg" alt="MK Logo" />
         </div>
+      </div>
 
-        <div class="mid">
-            <div class="sections">
-                <button data-target="#home">Home</button>
-                <button data-target="#about">About</button>
-                <button data-target="#services">Services</button>
-                <button data-target="#projects">Projects</button>
-                <button data-target="#contact">Contact</button>
-            </div>
+      <div class="mid">
+        <div class="sections">
+          <button data-target="#home">Home</button>
+          <button data-target="#about">About</button>
+          <button data-target="#services">Services</button>
+          <button data-target="#projects">Projects</button>
+          <button data-target="#contact">Contact</button>
         </div>
+      </div>
 
-        <div class="right">
-            <div class="menu">
-                <button class="">
-                    <img src="./assets/light-bulb.png" alt="Icon">
-                </button>
-                <button class="">
-                    <img src="./assets/light-bulb.png" alt="Icon">
-                </button>
-            </div>
+      <div class="right">
+        <div class="menu">
+          <button class="light" id="toggle_theme">
+            <svg class="icon light-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="m22 17v2h-1v1h-1v1h-2v1h-2v1h-6v-1h-2v-1h-2v-1h-1v-1h-1v-2h-1v-2h-1v-6h1v-2h1v-2h1v-1h1v-1h2v-1h2v-1h5v1h-2v1h-2v1h-1v2h-1v2h-1v4h1v2h1v2h1v1h2v1h2v1h4v-1h2v-1z" fill="currentColor"/>
+            </svg>
+            <svg class="icon dark-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13 3h-2v2h2V3zm4 2h2v2h-2V5zm-6 6h2v2h-2v-2zm-8 0h2v2H3v-2zm18 0h-2v2h2v-2zM5 5h2v2H5V5zm14 14h-2v-2h2v2zm-8 2h2v-2h-2v2zm-4-2H5v-2h2v2zM9 7h6v2H9V7zm0 8H7V9h2v6zm0 0v2h6v-2h2V9h-2v6H9z" fill="currentColor"/>
+            </svg>
+          </button>
+          <button id="open_side-bar">
+            <svg
+              class="icon"
+              viewBox="0 0 14 14"
+              id="meteor-icon-kit__solid-bars-s"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M1.5 3.5C0.67157 3.5 0 2.82843 0 2C0 1.17157 0.67157 0.5 1.5 0.5H12.5C13.3284 0.5 14 1.17157 14 2C14 2.82843 13.3284 3.5 12.5 3.5H1.5zM1.5 8.5C0.67157 8.5 0 7.8284 0 7C0 6.1716 0.67157 5.5 1.5 5.5H12.5C13.3284 5.5 14 6.1716 14 7C14 7.8284 13.3284 8.5 12.5 8.5H1.5zM1.5 13.5C0.67157 13.5 0 12.8284 0 12C0 11.1716 0.67157 10.5 1.5 10.5H12.5C13.3284 10.5 14 11.1716 14 12C14 12.8284 13.3284 13.5 12.5 13.5H1.5z"
+                fill="currentColor"
+              />
+            </svg>
+          </button>
+          <button id="close_side-bar">
+            <svg class="icon" viewBox="14 14 50 50" xmlns="http://www.w3.org/2000/svg" fill="none">
+              <path d="m17 23h14v4h3v3h3v3h2v-3h3v-3h3v-4h14v4h-3v3h-3v3h-3v3h-3v4h3v3h3v3h3v3h3v4h-14v-4h-3v-3h-3v-3h-2v3h-3v3h-3v4h-14v-4h3v-3h3v-3h3v-3h3v-4h-3v-3h-3v-3h-3v-3h-3z" fill="currentColor" stroke-linejoin="round"/>
+              </svg>
+          </button>
         </div>
+      </div>
+    </div>
 
+    <div class="side-bar">
+      <div class="sections">
+        <button data-target="#home">Home</button>
+        <button data-target="#about">About</button>
+        <button data-target="#services">Services</button>
+        <button data-target="#projects">Projects</button>
+        <button data-target="#contact">Contact</button>
+      </div>
     </div>
 
     <div class="content">
-        <div id="home">
-
+      <div class="home" id="home">
+        <div class="introduction">
+          <div class="text">
+            <p>Hello,</p>
+            <p>I’m <span>Mohamad Kassem</span>,</p>
+            <p>But you can call me <span>MK</span>.</p>
+            <p>I’m a <span id="developer-type"></span> Developer.</p>
+          </div>
+          <div class="cv-download">
+            <button>
+              <svg
+                class="icon"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M13 17V3h-2v10H9v-2H7v2h2v2h2v2h2zm8 2v-4h-2v4H5v-4H3v6h18v-2zm-8-6v2h2v-2h2v-2h-2v2h-2z"
+                />
+              </svg>
+              <p>DOWNLOAD MY CV</p>
+            </button>
+          </div>
+          <div class="social">
+            <a href="#">
+              <svg
+                class="icon"
+                viewBox="-2 0 19 19"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0" />
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    style="fill: currentColor"
+                    d="M9.464 17.178a4.506 4.506 0 0 1-2.013.317 4.29 4.29 0 0 1-2.007-.317.746.746 0 0 1-.277-.587c0-.22-.008-.798-.012-1.567-2.564.557-3.105-1.236-3.105-1.236a2.44 2.44 0 0 0-1.024-1.348c-.836-.572.063-.56.063-.56a1.937 1.937 0 0 1 1.412.95 1.962 1.962 0 0 0 2.682.765 1.971 1.971 0 0 1 .586-1.233c-2.046-.232-4.198-1.023-4.198-4.554a3.566 3.566 0 0 1 .948-2.474 3.313 3.313 0 0 1 .091-2.438s.773-.248 2.534.945a8.727 8.727 0 0 1 4.615 0c1.76-1.193 2.532-.945 2.532-.945a3.31 3.31 0 0 1 .092 2.438 3.562 3.562 0 0 1 .947 2.474c0 3.54-2.155 4.32-4.208 4.548a2.195 2.195 0 0 1 .625 1.706c0 1.232-.011 2.227-.011 2.529a.694.694 0 0 1-.272.587z"
+                  />
+                </g>
+              </svg>
+            </a>
+            <a href="#">
+              <svg
+                class="icon"
+                viewBox="-100 -100 712 712"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="7935ec95c421cee6d86eb22ecd125aef">
+                  <path
+                    d="M116.504,500.219V170.654H6.975v329.564H116.504L116.504,500.219z M61.751,125.674c38.183,0,61.968-25.328,61.968-56.953c-0.722-32.328-23.785-56.941-61.252-56.941C24.994,11.781,0.5,36.394,0.5,68.722c0,31.625,23.772,56.953,60.53,56.953H61.751L61.751,125.674z M177.124,500.219c0,0,1.437-298.643,0-329.564H286.67v47.794h-0.727c14.404-22.49,40.354-55.533,99.44-55.533c72.085,0,126.116,47.103,126.116,148.333v188.971H401.971V323.912c0-44.301-15.848-74.531-55.497-74.531c-30.254,0-48.284,20.38-56.202,40.08c-2.897,7.012-3.602,16.861-3.602,26.711v184.047H177.124L177.124,500.219z"
+                  ></path>
+                </g>
+              </svg>
+            </a>
+          </div>
         </div>
-        <div class="about" id="about">
-            <div class="introduce">
-                <div class="profile">
-                    <img src="./assets/pp2.jpg" alt="MK Photo">
-                </div>
-                <div class="text">
-                    Mohamad Kassem I'm a 22-year-old Lebanese individual who attended the Lebanese International University (LIU), where I developed a passion for learning and excelled academically. I have a strong aptitude for quickly understanding and mastering various subjects. As a full-stack developer, I am proficient in a wide range of technologies, which enables me to build robust and dynamic web applications.
-                </div>
+        <div class="profile">
+          <img src="./assets/pp1.PNG" alt="Home MK Photo" />
+        </div>
+      </div>
+      <div class="about" id="about">
+        <div class="introduce">
+          <div class="profile">
+            <img src="./assets/pp2.jpg" alt="MK Photo" />
+          </div>
+          <div class="text">
+            Mohamad Kassem I'm a 22-year-old Lebanese individual who attended
+            the Lebanese International University (LIU), where I developed a
+            passion for learning and excelled academically. I have a strong
+            aptitude for quickly understanding and mastering various subjects.
+            As a full-stack developer, I am proficient in a wide range of
+            technologies, which enables me to build robust and dynamic web
+            applications.
+          </div>
+        </div>
+      </div>
+      <div class="services" id="services">
+        <div class="item">
+          <div class="top">
+            <img src="./assets/imac.png" alt="Service Image" />
+          </div>
+          <div class="bottom">
+            <div class="name">Web Developer</div>
+            <div class="description">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti
+              consequatur laborum, accusamus nesciunt odit nulla suscipit dolor
+              perspiciatis, explicabo consectetur excepturi, assumenda sequi
+              cupiditate porro architecto voluptates tempora ipsum mollitia.
             </div>
+          </div>
         </div>
-        <div class="services" id="services">
-            <div class="item">
-                <div class="top">
-                    <img src="./assets/imac.png" alt="Service Image">
-                </div>
-                <div class="bottom">
-                    <div class="name">Web Developer</div>
-                    <div class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti consequatur laborum, accusamus nesciunt odit nulla suscipit dolor perspiciatis, explicabo consectetur excepturi, assumenda sequi cupiditate porro architecto voluptates tempora ipsum mollitia.</div>
-                </div>
+      </div>
+      <div class="projects" id="projects">
+        <div class="item">
+          <div class="top">
+            <img src="" alt="Project Profile" />
+          </div>
+          <div class="bottom">
+            <div class="title">
+              <div class="logo-type">
+                <img src="" alt="Icon" />
+              </div>
+              <div class="name"></div>
             </div>
-        </div>
-        <div class="projects" id="projects">
-            <div class="item">
-                <div class="top">
-                    <img src="" alt="Project Profile">
-                </div>
-                <div class="bottom">
-                    <div class="title">
-                        <div class="logo-type">
-                            <img src="" alt="Icon">
-                        </div>
-                        <div class="name"></div>
-                    </div>
-                    <div class="description"></div>
-                    <div class="used">
-                        <div class="item"></div>
-                    </div>
-                </div>
+            <div class="description"></div>
+            <div class="used">
+              <div class="item"></div>
             </div>
+          </div>
         </div>
-        <div class="contact" id="contact"></div>
+      </div>
+      <div class="contact" id="contact"></div>
     </div>
-    
-<script src="./script/script.js"></script>
-</body>
+    <script src="./script/script.js"></script>
+  </body>
 </html>
