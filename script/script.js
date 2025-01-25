@@ -1,6 +1,6 @@
 $(document).ready(function () {
-  if ('scrollRestoration' in history) {
-    history.scrollRestoration = 'manual';
+  if ("scrollRestoration" in history) {
+    history.scrollRestoration = "manual";
   }
   $(window).scrollTop(0);
 });
