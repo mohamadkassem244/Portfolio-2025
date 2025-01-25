@@ -474,6 +474,7 @@ body {
       & .cv-download {
         display: flex;
         background-color: transparent;
+        text-decoration: none;
         @media (max-width: 480px) {
           justify-content: center;
           height: 3.6rem;
@@ -878,7 +879,6 @@ body {
       justify-content: center;
       gap: var(--padding-gap-margin-l);
       width: 80%;
-      color: var(--font-secondary-color);
       background-color: transparent;
       & input,
       textarea,
@@ -889,9 +889,15 @@ body {
         padding: var(--padding-gap-margin-m);
         box-sizing: border-box;
         font-size: 1.3rem;
+        color: var(--font-secondary-color);
         background-color: var(--background-secondary-color);
         box-shadow: var(--shadow-color);
         border-radius: var(--border-radius);
+      }
+      input:-webkit-autofill,
+      textarea:-webkit-autofill {
+        transition: background-color 5000s ease-in-out 0s;
+        -webkit-text-fill-color: var(--font-secondary-color) !important;
       }
       & input::placeholder,
       textarea::placeholder {

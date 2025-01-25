@@ -542,6 +542,7 @@ body {
 .content .home .introduction .cv-download {
   display: flex;
   background-color: transparent;
+  text-decoration: none;
 }
 @media (max-width: 480px) {
   .content .home .introduction .cv-download {
@@ -1005,7 +1006,6 @@ body {
   justify-content: center;
   gap: var(--padding-gap-margin-l);
   width: 80%;
-  color: var(--font-secondary-color);
   background-color: transparent;
 }
 .content .contact .form input,
@@ -1017,9 +1017,15 @@ body {
   padding: var(--padding-gap-margin-m);
   box-sizing: border-box;
   font-size: 1.3rem;
+  color: var(--font-secondary-color);
   background-color: var(--background-secondary-color);
   box-shadow: var(--shadow-color);
   border-radius: var(--border-radius);
+}
+.content .contact .form input:-webkit-autofill,
+.content .contact .form textarea:-webkit-autofill {
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-text-fill-color: var(--font-secondary-color) !important;
 }
 .content .contact .form input::placeholder,
 .content .contact .form textarea::placeholder {
