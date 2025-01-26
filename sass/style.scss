@@ -582,6 +582,7 @@ body {
       justify-content: center;
       width: 100%;
       aspect-ratio: 1;
+      padding: var(--padding-gap-margin-s) 0;
       overflow: hidden;
       background-color: transparent;
       & img {
@@ -640,10 +641,19 @@ body {
         display: flex;
         align-items: center;
         justify-content: start;
+        flex-direction: column;
+        gap: var(--padding-gap-margin-m);
         background-color: transparent;
-        font-size: 1.1rem;
         color: var(--font-primary-color);
-        text-align: justify;
+        & .myself-title {
+          font-weight: bold;
+          font-size: 1.5rem;
+          text-transform: uppercase;
+        }
+        & .myself-text {
+          text-align: justify;
+          font-size: 1.1rem;
+        }
       }
     }
   }
@@ -780,7 +790,7 @@ body {
           display: flex;
           flex-direction: column;
           width: 100%;
-          gap: var(--padding-gap-margin-m);
+          gap: var(--padding-gap-margin-s);
           background-color: transparent;
           & .title {
             display: flex;
@@ -836,7 +846,7 @@ body {
             & .technology {
               width: max-content;
               text-transform: uppercase;
-              padding: var(--padding-gap-margin-m);
+              padding: var(--padding-gap-margin-s) var(--padding-gap-margin-m);
               background-color: var(--background-secondary-color);
               color: var(--font-secondary-color);
               box-shadow: var(--shadow-color);
@@ -1033,7 +1043,7 @@ body {
     overflow: hidden;
     width: 100%;
     gap: var(--padding-gap-margin-m);
-    padding: var(--padding-gap-margin-m) 0;
+    padding: var(--padding-gap-margin-l) 0;
     background-color: transparent;
     & p {
       font-size: 1.6rem;
@@ -1044,7 +1054,7 @@ body {
     }
     & hr {
       border: none;
-      width: 20%;
+      width: 25%;
       border-top: 0.5rem solid var(--font-secondary-color);
       background-color: transparent;
     }
